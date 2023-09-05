@@ -3,8 +3,11 @@ on:
   workflow_dispatch:
 jobs:
   firstjob:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: firstJob script
-        shell: cmd
+        shell: bash
         run: echo Hello World! This is the first job
+      - name: Checkout
+        uses: actions/checkout@v4.0.0
+            
