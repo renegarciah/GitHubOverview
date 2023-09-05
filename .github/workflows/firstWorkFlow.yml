@@ -7,7 +7,9 @@ jobs:
     steps:
       - name: firstJob script
         shell: bash
-        run: echo Hello World! This is the first job
+        run: |
+           echo "The following is a secret: ${{ secrets.GITHUBOVERVIEW_SECRET }}, of course, I cant tell you because then it wouldnt be a secret..."
+           echo Hello World! This is the first job
       - name: Checkout
         uses: actions/checkout@v4.0.0
             
